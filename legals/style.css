@@ -1,9 +1,16 @@
+:root {
+  --content-padding: 1rem 1.6rem;
+  --primary-color: blue;
+}
+
 * {
+  font: inherit;
   margin: 0;
   padding: 0;
 }
 
 a {
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -18,8 +25,8 @@ strong {
 }
 
 blockquote {
-  border-left: 0.5rem solid blue;
-  padding: 1rem 1.6rem;
+  border-left: 0.5rem solid var(--primary-color);
+  padding: var(--content-padding);
 }
 
 blockquote,
@@ -36,7 +43,7 @@ body {
   line-height: 1.6;
   margin: auto;
   max-width: 80ch;
-  padding: 1.6rem;
+  padding: var(--content-padding);
 }
 
 footer {
@@ -47,11 +54,9 @@ footer {
 h1,
 h2,
 h3 {
-  font-weight: 300;
   letter-spacing: -0.1rem;
   line-height: 1.2;
   margin-bottom: 2rem;
-  margin-top: 0;
 }
 
 h1 {
@@ -90,5 +95,5 @@ ul {
 }
 
 ul li::marker {
-  color: blue;
+  color: var(--primary-color);
 }
