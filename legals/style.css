@@ -1,6 +1,8 @@
 :root {
   --content-padding: 1rem 1.6rem;
+  --background-color: white;
   --primary-color: blue;
+  --text-color: black;
 }
 
 * {
@@ -10,12 +12,13 @@
 }
 
 html {
-  color-scheme: light dark;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
@@ -103,12 +106,37 @@ strong {
   font-weight: 600;
 }
 
+::selection {
+  background-color: lime;
+  color: black;
+}
+
 .material-symbols-rounded {
+  border-radius: 25px;
   color: var(--primary-color);
   font-size: 2rem;
   padding: 1rem;
 }
 
-::selection {
-  background-color: lime;
+.material-symbols-rounded:hover {
+  background-color: rgb(211, 211, 211, 0.2);
+  cursor: pointer;
+}
+
+#theme-switch span:last-child {
+  display: none;
+}
+
+/* || DARK MODE */
+.dark-mode {
+  --background-color: #222;
+  --text-color: white;
+}
+
+.dark-mode #theme-switch span:first-child {
+  display: none;
+}
+
+.dark-mode #theme-switch span:last-child {
+  display: block;
 }
