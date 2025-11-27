@@ -123,7 +123,7 @@ strong {
   cursor: pointer;
 }
 
-#theme-switch span:last-child {
+#theme-switch i:last-child {
   display: none;
 }
 
@@ -133,10 +133,10 @@ strong {
   --text-color: white;
 }
 
-.dark-mode #theme-switch span:first-child {
+.dark-mode #theme-switch i:first-child {
   display: none;
 }
 
-.dark-mode #theme-switch span:last-child {
+.dark-mode #theme-switch i:last-child {
   display: block;
 }
